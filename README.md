@@ -30,9 +30,13 @@ disp(['The learned parameters are: ',num2str(learned_w)])
 
 The above code is pretty self-explanatory, but I feel it is important to discuss the system abstractions here. I designed the system guided by the Weka organization, so anyone who is familiar with it will feel very comfortable using this framework.
 I'll just give a brief definition of the major abstractions. 
-- A *Graph* is represented by an unweighted adjacency matrix that determines which nodes are connected to each other. Additionally, each edge has an array of values attached to it which we call *features*.
+
+-A *Graph* is represented by an unweighted adjacency matrix that determines which nodes are connected to each other. Additionally, each edge has an array of values attached to it which we call *features*.
+
 -An *Instance* object defines the positive and negative links for a given node. You can think of these as the classes/labels for the node in a multilabel classification task, which ultimately is what we are trying to learn to predict. For predicting the positive and negative links the algorithm uses information about the graph topology and the features for each link. The effect that each feature has on the prediction depends heavily on the feature parameters and slightly on the *weighter function*. 
+
 -In order to learn anything useful, the algorithm needs many instance objects which are grouped in an *Instances* object for easier manipulation. 
+
 -The *ParameterLearner* tries to find those parameters that give the predictions that match the positive/negative links specified. Each instance is treated independently although some of them may share the same graph. The learner uses the *cost function* to evaluate its predictions.
  
 
