@@ -39,6 +39,8 @@ I'll just give a brief definition of the major abstractions.
 
 - The *ParameterLearner* tries to find those parameters that give the predictions that match the positive/negative links specified. Each instance is treated independently although some of them may share the same graph. The learner uses the *cost function* to evaluate its predictions.
  
+ 
+The system architecture and package structure is summarized in the following diagram
 
 ![alt tag](https://raw.githubusercontent.com/gajduk/link-prediction-with-supervised-random-walks/master/architecture.png)
 
