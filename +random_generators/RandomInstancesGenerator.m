@@ -10,7 +10,7 @@ classdef RandomInstancesGenerator < handle
         num_instances = 50;%number of instances (sDL groups)
         graph_generator = random_generators.RandomGraphGenerator();%a generator used to generate graphs
         weighter = utils.EdgeWeighter(1);%weighter function
-        w = [1,-1];%feature parameters, length must be same as the number of features, otheriwse num of features will be changed
+        w = [1,-1];%feature parameters, length must be same as the number of features, otherwise num of features will be changed
     end
     
     methods
